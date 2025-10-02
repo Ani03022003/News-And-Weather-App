@@ -16,7 +16,6 @@ An Android application built with **Kotlin** and **MVVM architecture** that prov
 |-------------|--------------|--------------|  
 | ![Home](screenshots/home.png) | ![Details](screenshots/details.png) | ![Weather](screenshots/weather.png) |  
 
-> ⚠️ Place your screenshots inside a folder named `screenshots/` in the project root, and update the file names above.  
 
 ## 🏗️ Tech Stack  
 - **Language**: Kotlin  
@@ -35,16 +34,7 @@ An Android application built with **Kotlin** and **MVVM architecture** that prov
 
 2. Open in **Android Studio**  
 
-3. Add your API keys in `local.properties` or `Constants.kt`:  
-   ```properties
-   NEWS_API_KEY=your_api_key
-   WEATHER_API_KEY=your_api_key
-   ```  
-
-4. Build and run the app 🚀  
-
-## 📸 Demo Video  
-👉 *(Optional) Add a short GIF or YouTube link here to showcase the app in action*  
+3. Build and run the app 🚀  
 
 ## 🙌 Acknowledgements  
 - [News API](https://newsapi.org/)  
