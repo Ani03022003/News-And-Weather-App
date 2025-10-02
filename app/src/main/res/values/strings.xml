@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NewsFeed</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description">%s</string>
+    <string name="read_more">Read More…</string>
+    <string name="news_image">News Image</string>
+    <string name="news_feed">News Feed</string>
+    <string name="cloudy">Cloudy</string>
+    <string name="_31_chennai">31° Chennai</string>
+<!--    <string name="weatherImage">https://openweathermap.org/img/wn/%s@2x.png</string>-->
+
+</resources>

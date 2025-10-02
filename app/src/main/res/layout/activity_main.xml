@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+            <variable
+                name="weatherData"
+                type="com.example.newsfeed.network.WeatherData" />
+    </data>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:fitsSystemWindows="true">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/my_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/md_theme_primary"
+                    android:elevation="4dp">
+
+                        <TextView
+                            android:id="@+id/app_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/news_feed"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.5">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/temp_and_area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            tools:text="@string/_31_chennai"
+                            app:tempAndArea="@{weatherData}"
+                            android:textColor="#FFFDFD"
+                            app:layout_constraintBottom_toTopOf="@+id/weather_description"
+                            app:layout_constraintEnd_toStartOf="@+id/weather_icon"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/weather_description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="@string/cloudy"
+                            android:textColor="#FFFFFF"
+                            android:textSize="11sp"
+                            app:description="@{weatherData}"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="@+id/temp_and_area"
+                            app:layout_constraintStart_toStartOf="@+id/temp_and_area"
+                            app:layout_constraintTop_toBottomOf="@+id/temp_and_area" />
+
+                        <ImageView
+                            android:id="@+id/weather_icon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="16dp"
+                            android:visibility="gone"
+                            app:weatherBindImage="@{weatherData}"
+                            tools:src="@drawable/icons8_partly_cloudy_day"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/enable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:text="Enable Location"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/m_nav_host"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:name="androidx.navigation.fragment.NavHostFragment"
+                    app:defaultNavHost="true"
+                    app:navGraph="@navigation/navigation">
+
+                </androidx.fragment.app.FragmentContainerView>
+        </LinearLayout>
+</layout>
