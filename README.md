@@ -14,7 +14,7 @@ An Android application built with **Kotlin** and **MVVM architecture** that prov
 
 | Home Screen | News Details | Weather Info |  
 |-------------|--------------|--------------|  
-| ![Home](screenshots/home.png) | ![Details](screenshots/details.png) | ![Weather](screenshots/weather.png) |  
+| ![Home](./screenshots/NewsList.png) | ![Details](./screenshots/NewsDetail.png) | ![Weather](./screenshots/Weather.png) |  
 
 
 ## 🏗️ Tech Stack  
